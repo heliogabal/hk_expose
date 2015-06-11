@@ -15,6 +15,7 @@ function hk_expose_default_rules_configuration() {
       "OWNER" : "rules",
       "TAGS" : [ "custom" ],
       "REQUIRES" : [ "rules", "rules_download" ],
+      "ACCESS_EXPOSED" : "1",
       "USES VARIABLES" : { "node" : { "label" : "node", "type" : "node" } },
       "IF" : [
         { "entity_is_of_bundle" : {
@@ -54,6 +55,7 @@ function hk_expose_default_rules_configuration() {
   $items['rules_create_pdf_expose_when_object_or_apart_changed'] = entity_import('rules_config', '{ "rules_create_pdf_expose_when_object_or_apart_changed" : {
       "LABEL" : "Create PDF Expos\\u00e9 when object or apart changed",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "OWNER" : "rules",
       "TAGS" : [ "custom" ],
       "REQUIRES" : [ "rules" ],

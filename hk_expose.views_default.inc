@@ -303,6 +303,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_apart_rooms']['id'] = 'field_apart_rooms';
   $handler->display->display_options['fields']['field_apart_rooms']['table'] = 'field_data_field_apart_rooms';
   $handler->display->display_options['fields']['field_apart_rooms']['field'] = 'field_apart_rooms';
+  $handler->display->display_options['fields']['field_apart_rooms']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_rooms']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_apart_rooms']['settings'] = array(
     'thousand_separator' => ' ',
@@ -328,6 +329,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Header Telephone number';
   $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="phone"><i class="icon-hk-icon-telephone"></i> 030.7808 7080</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
@@ -337,7 +339,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Opening div class=apartmerkmale';
   $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<div class="views-field-field-apart-no">Details</div>
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<div class="details">Details</div>
 <div class="apartmerkmale">';
   $handler->display->display_options['fields']['nothing_1']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
@@ -357,7 +359,6 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['id'] = 'field_apart_sleeping_rooms';
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['table'] = 'field_data_field_apart_sleeping_rooms';
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['field'] = 'field_apart_sleeping_rooms';
-  $handler->display->display_options['fields']['field_apart_sleeping_rooms']['label'] = 'Schlafzimmer';
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['alter']['text'] = '<div class="apartmerkmale">[field_apart_sleeping_rooms]';
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['hide_empty'] = TRUE;
@@ -399,11 +400,21 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_no_of_floors']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_no_of_floors']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_no_of_floors']['hide_empty'] = TRUE;
+  /* Field: Content: Ceiling height */
+  $handler->display->display_options['fields']['field_apart_ceiling_height']['id'] = 'field_apart_ceiling_height';
+  $handler->display->display_options['fields']['field_apart_ceiling_height']['table'] = 'field_data_field_apart_ceiling_height';
+  $handler->display->display_options['fields']['field_apart_ceiling_height']['field'] = 'field_apart_ceiling_height';
+  $handler->display->display_options['fields']['field_apart_ceiling_height']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_apart_ceiling_height']['settings'] = array(
+    'thousand_separator' => ' ',
+    'decimal_separator' => ',',
+    'scale' => '2',
+    'prefix_suffix' => 1,
+  );
   /* Field: Content: Commission */
   $handler->display->display_options['fields']['field_apart_commission']['id'] = 'field_apart_commission';
   $handler->display->display_options['fields']['field_apart_commission']['table'] = 'field_data_field_apart_commission';
   $handler->display->display_options['fields']['field_apart_commission']['field'] = 'field_apart_commission';
-  $handler->display->display_options['fields']['field_apart_commission']['label'] = 'Provision';
   $handler->display->display_options['fields']['field_apart_commission']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_commission']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_apart_commission']['empty_zero'] = TRUE;
@@ -508,27 +519,37 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['nothing_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing_2']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['nothing_2']['element_default_classes'] = FALSE;
-  /* Field: Content: Apartment description */
-  $handler->display->display_options['fields']['field_apart_description']['id'] = 'field_apart_description';
-  $handler->display->display_options['fields']['field_apart_description']['table'] = 'field_data_field_apart_description';
-  $handler->display->display_options['fields']['field_apart_description']['field'] = 'field_apart_description';
-  $handler->display->display_options['fields']['field_apart_description']['label'] = 'Beschreibung';
-  $handler->display->display_options['fields']['field_apart_description']['hide_empty'] = TRUE;
   /* Field: Content: Fittings */
   $handler->display->display_options['fields']['field_ausstattung']['id'] = 'field_ausstattung';
   $handler->display->display_options['fields']['field_ausstattung']['table'] = 'field_data_field_ausstattung';
   $handler->display->display_options['fields']['field_ausstattung']['field'] = 'field_ausstattung';
+  $handler->display->display_options['fields']['field_ausstattung']['alter']['text'] = '<li>[field_ausstattung]</li>';
+  $handler->display->display_options['fields']['field_ausstattung']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_ausstattung']['element_label_class'] = 'ausstattung-label';
   $handler->display->display_options['fields']['field_ausstattung']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ausstattung']['element_wrapper_class'] = 'ausstattung';
+  $handler->display->display_options['fields']['field_ausstattung']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_ausstattung']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_ausstattung']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ausstattung']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_ausstattung']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_ausstattung']['multi_type'] = 'ul';
+  /* Field: Content: Apartment description */
+  $handler->display->display_options['fields']['field_apart_description']['id'] = 'field_apart_description';
+  $handler->display->display_options['fields']['field_apart_description']['table'] = 'field_data_field_apart_description';
+  $handler->display->display_options['fields']['field_apart_description']['field'] = 'field_apart_description';
+  $handler->display->display_options['fields']['field_apart_description']['label'] = 'Description';
+  $handler->display->display_options['fields']['field_apart_description']['element_label_type'] = 'h3';
+  $handler->display->display_options['fields']['field_apart_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_apart_description']['hide_empty'] = TRUE;
   /* Field: Content: Standort */
   $handler->display->display_options['fields']['field_objekt_wkt']['id'] = 'field_objekt_wkt';
   $handler->display->display_options['fields']['field_objekt_wkt']['table'] = 'field_data_field_objekt_wkt';
   $handler->display->display_options['fields']['field_objekt_wkt']['field'] = 'field_objekt_wkt';
   $handler->display->display_options['fields']['field_objekt_wkt']['relationship'] = 'field_object_ref_target_id';
   $handler->display->display_options['fields']['field_objekt_wkt']['label'] = '';
+  $handler->display->display_options['fields']['field_objekt_wkt']['alter']['text'] = '<iframe width=\'100%\' height=\'400px\' frameBorder=\'0\' src=\'https://a.tiles.mapbox.com/v4/heliogabal23.l8fho93p/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoiaGVsaW9nYWJhbDIzIiwiYSI6IllaSnN4azQifQ.fR5dKirb7efL6hsZD18AOw\'></iframe>';
+  $handler->display->display_options['fields']['field_objekt_wkt']['element_class'] = 'mapcontainer';
   $handler->display->display_options['fields']['field_objekt_wkt']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_objekt_wkt']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_objekt_wkt']['click_sort_column'] = 'geom';
@@ -547,8 +568,8 @@ function hk_expose_views_default_views() {
     ),
     'icon' => array(
       'iconType' => 'marker',
-      'iconUrl' => '',
-      'shadowUrl' => 'sites/all/themes/bear_skin/images/Icon_House.png',
+      'iconUrl' => 'sites/all/themes/bear_skin/images/Icon_House.png',
+      'shadowUrl' => '',
       'html' => '',
       'iconImageStyle' => '',
       'htmlClass' => '',
@@ -586,13 +607,17 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_apart_location']['id'] = 'field_apart_location';
   $handler->display->display_options['fields']['field_apart_location']['table'] = 'field_data_field_apart_location';
   $handler->display->display_options['fields']['field_apart_location']['field'] = 'field_apart_location';
-  $handler->display->display_options['fields']['field_apart_location']['label'] = 'Lage';
+  $handler->display->display_options['fields']['field_apart_location']['label'] = 'Location';
+  $handler->display->display_options['fields']['field_apart_location']['element_label_type'] = 'h3';
+  $handler->display->display_options['fields']['field_apart_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_location']['hide_empty'] = TRUE;
   /* Field: Content: Apartment other */
   $handler->display->display_options['fields']['field_apart_other']['id'] = 'field_apart_other';
   $handler->display->display_options['fields']['field_apart_other']['table'] = 'field_data_field_apart_other';
   $handler->display->display_options['fields']['field_apart_other']['field'] = 'field_apart_other';
-  $handler->display->display_options['fields']['field_apart_other']['label'] = 'Sonstiges';
+  $handler->display->display_options['fields']['field_apart_other']['label'] = 'Other';
+  $handler->display->display_options['fields']['field_apart_other']['element_label_type'] = 'h3';
+  $handler->display->display_options['fields']['field_apart_other']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_other']['hide_empty'] = TRUE;
   /* Field: Content: Object images */
   $handler->display->display_options['fields']['field_object_images']['id'] = 'field_object_images';
