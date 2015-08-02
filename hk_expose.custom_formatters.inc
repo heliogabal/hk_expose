@@ -18,7 +18,7 @@ function hk_expose_custom_formatters_defaults() {
   $formatter->description = 'A link that outputs "Print Exposé"';
   $formatter->mode = 'token';
   $formatter->field_types = 'file';
-  $formatter->code = '<a class="expose" href="[file:download-url]" title="[file:basename]">Print Exposé</a>';
+  $formatter->code = '<a class="expose" href="[file:download-url]" title="[file:basename]">Exposé</a>';
   $formatter->fapi = '';
   $export['expose_link'] = $formatter;
 

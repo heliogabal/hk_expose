@@ -36,6 +36,14 @@ function hk_expose_image_default_styles() {
   $styles['expose'] = array(
     'label' => 'Exposé',
     'effects' => array(
+      27 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reuse_crop_style' => 'colorbox_full',
+          'apply_all_effects' => 1,
+        ),
+        'weight' => 1,
+      ),
       2 => array(
         'name' => 'smartcrop_scale_and_crop',
         'data' => array(
