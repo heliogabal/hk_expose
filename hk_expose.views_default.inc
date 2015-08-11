@@ -263,6 +263,36 @@ function hk_expose_views_default_views() {
   );
   $handler->display->display_options['fields']['field_apart_floor_plan']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_apart_floor_plan']['separator'] = '';
+  /* Feld: 1. Objektbild, wenn keine zwei Grundrisse */
+  $handler->display->display_options['fields']['field_object_images_2']['id'] = 'field_object_images_2';
+  $handler->display->display_options['fields']['field_object_images_2']['table'] = 'field_data_field_object_images';
+  $handler->display->display_options['fields']['field_object_images_2']['field'] = 'field_object_images';
+  $handler->display->display_options['fields']['field_object_images_2']['relationship'] = 'field_object_ref_target_id';
+  $handler->display->display_options['fields']['field_object_images_2']['ui_name'] = '1. Objektbild, wenn keine zwei Grundrisse';
+  $handler->display->display_options['fields']['field_object_images_2']['label'] = '';
+  $handler->display->display_options['fields']['field_object_images_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_object_images_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_object_images_2']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_object_images_2']['settings'] = array(
+    'image_style' => 'expose',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_object_images_2']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_object_images_2']['delta_offset'] = '0';
+  /* Feld: Inhalt: Floor plan */
+  $handler->display->display_options['fields']['field_apart_floor_plan_1']['id'] = 'field_apart_floor_plan_1';
+  $handler->display->display_options['fields']['field_apart_floor_plan_1']['table'] = 'field_data_field_apart_floor_plan';
+  $handler->display->display_options['fields']['field_apart_floor_plan_1']['field'] = 'field_apart_floor_plan';
+  $handler->display->display_options['fields']['field_apart_floor_plan_1']['label'] = '';
+  $handler->display->display_options['fields']['field_apart_floor_plan_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_apart_floor_plan_1']['empty'] = '[field_object_images_2]';
+  $handler->display->display_options['fields']['field_apart_floor_plan_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_apart_floor_plan_1']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_apart_floor_plan_1']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_apart_floor_plan_1']['delta_offset'] = '1';
   /* Feld: Inhalt: Objekt ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
@@ -427,7 +457,7 @@ function hk_expose_views_default_views() {
     'scale' => '2',
     'prefix_suffix' => 1,
   );
-  /* Feld: Inhalt: Commission */
+  /* Feld: Inhalt: excl. Commission */
   $handler->display->display_options['fields']['field_apart_commission']['id'] = 'field_apart_commission';
   $handler->display->display_options['fields']['field_apart_commission']['table'] = 'field_data_field_apart_commission';
   $handler->display->display_options['fields']['field_apart_commission']['field'] = 'field_apart_commission';
@@ -553,6 +583,19 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_ausstattung']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_ausstattung']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_ausstattung']['multi_type'] = 'ul';
+  /* Feld: Inhalt: Pictures */
+  $handler->display->display_options['fields']['field_apart_pictures']['id'] = 'field_apart_pictures';
+  $handler->display->display_options['fields']['field_apart_pictures']['table'] = 'field_data_field_apart_pictures';
+  $handler->display->display_options['fields']['field_apart_pictures']['field'] = 'field_apart_pictures';
+  $handler->display->display_options['fields']['field_apart_pictures']['label'] = '';
+  $handler->display->display_options['fields']['field_apart_pictures']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_apart_pictures']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_apart_pictures']['settings'] = array(
+    'image_style' => 'expose',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_apart_pictures']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_apart_pictures']['delta_offset'] = '0';
   /* Feld: Inhalt: Apartment description */
   $handler->display->display_options['fields']['field_apart_description']['id'] = 'field_apart_description';
   $handler->display->display_options['fields']['field_apart_description']['table'] = 'field_data_field_apart_description';
@@ -561,6 +604,20 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_apart_description']['element_label_type'] = 'h3';
   $handler->display->display_options['fields']['field_apart_description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_description']['hide_empty'] = TRUE;
+  /* Feld: Inhalt: Object images */
+  $handler->display->display_options['fields']['field_object_images_1']['id'] = 'field_object_images_1';
+  $handler->display->display_options['fields']['field_object_images_1']['table'] = 'field_data_field_object_images';
+  $handler->display->display_options['fields']['field_object_images_1']['field'] = 'field_object_images';
+  $handler->display->display_options['fields']['field_object_images_1']['relationship'] = 'field_object_ref_target_id';
+  $handler->display->display_options['fields']['field_object_images_1']['label'] = '';
+  $handler->display->display_options['fields']['field_object_images_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_object_images_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_object_images_1']['settings'] = array(
+    'image_style' => 'expose',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_object_images_1']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_object_images_1']['delta_offset'] = '1';
   /* Feld: Inhalt: House description */
   $handler->display->display_options['fields']['field_object_description']['id'] = 'field_object_description';
   $handler->display->display_options['fields']['field_object_description']['table'] = 'field_data_field_object_description';
@@ -684,8 +741,22 @@ function hk_expose_views_default_views() {
     'image_style' => 'expose',
     'image_link' => '',
   );
-  $handler->display->display_options['fields']['field_object_images']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_object_images']['delta_offset'] = '2';
+  $handler->display->display_options['fields']['field_object_images']['multi_type'] = 'ul';
   $handler->display->display_options['fields']['field_object_images']['separator'] = '';
+  /* Feld: Inhalt: Pictures */
+  $handler->display->display_options['fields']['field_apart_pictures_1']['id'] = 'field_apart_pictures_1';
+  $handler->display->display_options['fields']['field_apart_pictures_1']['table'] = 'field_data_field_apart_pictures';
+  $handler->display->display_options['fields']['field_apart_pictures_1']['field'] = 'field_apart_pictures';
+  $handler->display->display_options['fields']['field_apart_pictures_1']['label'] = '';
+  $handler->display->display_options['fields']['field_apart_pictures_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_apart_pictures_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_apart_pictures_1']['settings'] = array(
+    'image_style' => 'expose',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_apart_pictures_1']['delta_offset'] = '1';
+  $handler->display->display_options['fields']['field_apart_pictures_1']['multi_type'] = 'ul';
   /* Feld: Inhalt: Ansprechpartner */
   $handler->display->display_options['fields']['field_ansprechpartner']['id'] = 'field_ansprechpartner';
   $handler->display->display_options['fields']['field_ansprechpartner']['table'] = 'field_data_field_ansprechpartner';
