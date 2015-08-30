@@ -17,6 +17,9 @@ function hk_expose_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "file_entity" && $api == "file_default_displays") {
     return array("version" => "1");
   }
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
 }
 
 /**
@@ -57,4 +60,22 @@ function hk_expose_image_default_styles() {
   );
 
   return $styles;
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function hk_expose_node_info() {
+  $items = array(
+    'expose' => array(
+      'name' => t('Exposé'),
+      'base' => 'node_content',
+      'description' => t('Ein Exposé verbindet einen Kontakt, ein Objekt und ein oder mehrere Wohungen zusammen mit AGB und Widerrufsbelehrung zu einem PDF.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  drupal_alter('node_info', $items);
+  return $items;
 }
