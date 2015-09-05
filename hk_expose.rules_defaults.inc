@@ -24,7 +24,8 @@ function hk_expose_default_rules_configuration() {
             "bundle" : { "value" : { "apartment" : "apartment" } }
           }
         },
-        { "entity_has_field" : { "entity" : [ "node" ], "field" : "field_apart_expose" } }
+        { "entity_has_field" : { "entity" : [ "node" ], "field" : "field_apart_expose" } },
+        { "node_is_published" : { "node" : [ "node" ] } }
       ],
       "DO" : [
         { "rules_download_action_generate_path" : {
