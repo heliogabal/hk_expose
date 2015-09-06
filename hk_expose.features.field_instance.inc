@@ -195,7 +195,7 @@ function hk_expose_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_expo_objektbild',
-    'label' => 'Objektbild',
+    'label' => 'Titelbild Objekt',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -369,9 +369,9 @@ function hk_expose_field_default_field_instances() {
   t('Anschreiben');
   t('Haus');
   t('Kontaktadresse');
-  t('Objektbild');
   t('Schreibe ein individuelles Anschreiben an den Kontakt.');
   t('Titel');
+  t('Titelbild Objekt');
   t('Wohnung(en)');
   t('Wähle das Haus, in dem das oder die Wohnungen für das Exposé sich befinden.');
   t('Wähle den Kontakt, an den das Exposé adressiert werden soll.');
