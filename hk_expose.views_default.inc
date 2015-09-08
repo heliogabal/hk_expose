@@ -43,13 +43,13 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Beziehung: Entity Reference: Referenced Entity */
+  /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_object_ref_target_id']['id'] = 'field_object_ref_target_id';
   $handler->display->display_options['relationships']['field_object_ref_target_id']['table'] = 'field_data_field_object_ref';
   $handler->display->display_options['relationships']['field_object_ref_target_id']['field'] = 'field_object_ref_target_id';
   $handler->display->display_options['relationships']['field_object_ref_target_id']['label'] = 'Objekt';
   $handler->display->display_options['relationships']['field_object_ref_target_id']['required'] = TRUE;
-  /* Feld: Bulk operations: Content */
+  /* Field: Bulk operations: Content */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
@@ -90,7 +90,7 @@ function hk_expose_views_default_views() {
       'label' => '',
     ),
   );
-  /* Feld: Content: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -101,7 +101,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['title']['element_class'] = 'page-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Feld: Content: Address */
+  /* Field: Content: Address */
   $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
   $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
@@ -116,7 +116,7 @@ function hk_expose_views_default_views() {
       'address' => 'address',
     ),
   );
-  /* Feld: Content: Borough */
+  /* Field: Content: Borough */
   $handler->display->display_options['fields']['field_bezirk']['id'] = 'field_bezirk';
   $handler->display->display_options['fields']['field_bezirk']['table'] = 'field_data_field_bezirk';
   $handler->display->display_options['fields']['field_bezirk']['field'] = 'field_bezirk';
@@ -127,7 +127,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_bezirk']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_bezirk']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_bezirk']['type'] = 'taxonomy_term_reference_plain';
-  /* Feld: 1. Objektbild, wenn keine zwei Grundrisse */
+  /* Field: 1. Objektbild, wenn keine zwei Grundrisse */
   $handler->display->display_options['fields']['field_object_images_2']['id'] = 'field_object_images_2';
   $handler->display->display_options['fields']['field_object_images_2']['table'] = 'field_data_field_object_images';
   $handler->display->display_options['fields']['field_object_images_2']['field'] = 'field_object_images';
@@ -143,7 +143,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_object_images_2']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_object_images_2']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_object_images_2']['separator'] = '';
-  /* Feld: Hausbeschreibung Ansicht */
+  /* Field: Hausbeschreibung Ansicht */
   $handler->display->display_options['fields']['view']['id'] = 'view';
   $handler->display->display_options['fields']['view']['table'] = 'views';
   $handler->display->display_options['fields']['view']['field'] = 'view';
@@ -154,7 +154,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['view']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['view']['view'] = 'apartment';
   $handler->display->display_options['fields']['view']['display'] = 'description';
-  /* Feld: Content: House description */
+  /* Field: Content: House description */
   $handler->display->display_options['fields']['field_object_description']['id'] = 'field_object_description';
   $handler->display->display_options['fields']['field_object_description']['table'] = 'field_data_field_object_description';
   $handler->display->display_options['fields']['field_object_description']['field'] = 'field_object_description';
@@ -163,7 +163,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_object_description']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_object_description']['element_class'] = 'house';
   $handler->display->display_options['fields']['field_object_description']['element_label_colon'] = FALSE;
-  /* Feld: Content: Other */
+  /* Field: Content: Other */
   $handler->display->display_options['fields']['field_object_other']['id'] = 'field_object_other';
   $handler->display->display_options['fields']['field_object_other']['table'] = 'field_data_field_object_other';
   $handler->display->display_options['fields']['field_object_other']['field'] = 'field_object_other';
@@ -171,7 +171,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_object_other']['label'] = '';
   $handler->display->display_options['fields']['field_object_other']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_object_other']['element_label_colon'] = FALSE;
-  /* Feld: Content: Apartment other */
+  /* Field: Content: Apartment other */
   $handler->display->display_options['fields']['field_apart_other']['id'] = 'field_apart_other';
   $handler->display->display_options['fields']['field_apart_other']['table'] = 'field_data_field_apart_other';
   $handler->display->display_options['fields']['field_apart_other']['field'] = 'field_apart_other';
@@ -179,7 +179,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_apart_other']['element_label_type'] = 'h3';
   $handler->display->display_options['fields']['field_apart_other']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_other']['empty'] = '[field_object_other] ';
-  /* Feld: Content: Object ID */
+  /* Field: Content: Object ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -187,14 +187,14 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_objektid_nunumeric']['label'] = '';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_objektid_nunumeric']['element_label_colon'] = FALSE;
-  /* Feld: Content: Apartment No. */
+  /* Field: Content: Apartment No. */
   $handler->display->display_options['fields']['field_apart_no']['id'] = 'field_apart_no';
   $handler->display->display_options['fields']['field_apart_no']['table'] = 'field_data_field_apart_no';
   $handler->display->display_options['fields']['field_apart_no']['field'] = 'field_apart_no';
   $handler->display->display_options['fields']['field_apart_no']['label'] = 'Apartment';
   $handler->display->display_options['fields']['field_apart_no']['alter']['text'] = '[field_objektid_nunumeric]-[field_apart_no]';
   $handler->display->display_options['fields']['field_apart_no']['element_label_colon'] = FALSE;
-  /* Feld: Content: Category */
+  /* Field: Content: Category */
   $handler->display->display_options['fields']['field_kategorie']['id'] = 'field_kategorie';
   $handler->display->display_options['fields']['field_kategorie']['table'] = 'field_data_field_kategorie';
   $handler->display->display_options['fields']['field_kategorie']['field'] = 'field_kategorie';
@@ -202,7 +202,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_kategorie']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_kategorie']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_kategorie']['type'] = 'taxonomy_term_reference_plain';
-  /* Feld: Content: Living space */
+  /* Field: Content: Living space */
   $handler->display->display_options['fields']['field_apart_living_space']['id'] = 'field_apart_living_space';
   $handler->display->display_options['fields']['field_apart_living_space']['table'] = 'field_data_field_apart_living_space';
   $handler->display->display_options['fields']['field_apart_living_space']['field'] = 'field_apart_living_space';
@@ -215,7 +215,7 @@ function hk_expose_views_default_views() {
     'scale' => '0',
     'prefix_suffix' => 1,
   );
-  /* Feld: Content: Rooms */
+  /* Field: Content: Rooms */
   $handler->display->display_options['fields']['field_apart_rooms']['id'] = 'field_apart_rooms';
   $handler->display->display_options['fields']['field_apart_rooms']['table'] = 'field_data_field_apart_rooms';
   $handler->display->display_options['fields']['field_apart_rooms']['field'] = 'field_apart_rooms';
@@ -225,7 +225,7 @@ function hk_expose_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
-  /* Feld: Content: Purchasing price */
+  /* Field: Content: Purchasing price */
   $handler->display->display_options['fields']['field_apart_price']['id'] = 'field_apart_price';
   $handler->display->display_options['fields']['field_apart_price']['table'] = 'field_data_field_apart_price';
   $handler->display->display_options['fields']['field_apart_price']['field'] = 'field_apart_price';
@@ -239,7 +239,7 @@ function hk_expose_views_default_views() {
     'scale' => '0',
     'prefix_suffix' => 1,
   );
-  /* Feld: Header Telephone number */
+  /* Field: Header Telephone number */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -249,7 +249,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="phone"><i class="icon-hk-icon-telephone"></i> 030.7808 7080</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
-  /* Feld: Opening div class=apartmerkmale */
+  /* Field: Opening div class=apartmerkmale */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
@@ -261,7 +261,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing_1']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['nothing_1']['element_default_classes'] = FALSE;
-  /* Feld: Content: Rooms */
+  /* Field: Content: Rooms */
   $handler->display->display_options['fields']['field_apart_rooms_1']['id'] = 'field_apart_rooms_1';
   $handler->display->display_options['fields']['field_apart_rooms_1']['table'] = 'field_data_field_apart_rooms';
   $handler->display->display_options['fields']['field_apart_rooms_1']['field'] = 'field_apart_rooms';
@@ -271,7 +271,7 @@ function hk_expose_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
-  /* Feld: Content: Sleeping rooms */
+  /* Field: Content: Sleeping rooms */
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['id'] = 'field_apart_sleeping_rooms';
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['table'] = 'field_data_field_apart_sleeping_rooms';
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['field'] = 'field_apart_sleeping_rooms';
@@ -282,7 +282,7 @@ function hk_expose_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
-  /* Feld: Content: Bathrooms */
+  /* Field: Content: Bathrooms */
   $handler->display->display_options['fields']['field_apart_bathrooms']['id'] = 'field_apart_bathrooms';
   $handler->display->display_options['fields']['field_apart_bathrooms']['table'] = 'field_data_field_apart_bathrooms';
   $handler->display->display_options['fields']['field_apart_bathrooms']['field'] = 'field_apart_bathrooms';
@@ -292,13 +292,13 @@ function hk_expose_views_default_views() {
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
-  /* Feld: Content: Moving in from */
+  /* Field: Content: Moving in from */
   $handler->display->display_options['fields']['field_moving_in_from']['id'] = 'field_moving_in_from';
   $handler->display->display_options['fields']['field_moving_in_from']['table'] = 'field_data_field_moving_in_from';
   $handler->display->display_options['fields']['field_moving_in_from']['field'] = 'field_moving_in_from';
   $handler->display->display_options['fields']['field_moving_in_from']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_moving_in_from']['hide_empty'] = TRUE;
-  /* Feld: Content: Floor */
+  /* Field: Content: Floor */
   $handler->display->display_options['fields']['field_apart_floor']['id'] = 'field_apart_floor';
   $handler->display->display_options['fields']['field_apart_floor']['table'] = 'field_data_field_apart_floor';
   $handler->display->display_options['fields']['field_apart_floor']['field'] = 'field_apart_floor';
@@ -307,7 +307,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_apart_floor']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_floor']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_apart_floor']['empty_zero'] = TRUE;
-  /* Feld: Content: No. of floors */
+  /* Field: Content: No. of floors */
   $handler->display->display_options['fields']['field_no_of_floors']['id'] = 'field_no_of_floors';
   $handler->display->display_options['fields']['field_no_of_floors']['table'] = 'field_data_field_no_of_floors';
   $handler->display->display_options['fields']['field_no_of_floors']['field'] = 'field_no_of_floors';
@@ -316,7 +316,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_no_of_floors']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_no_of_floors']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_no_of_floors']['hide_empty'] = TRUE;
-  /* Feld: Content: Ceiling height */
+  /* Field: Content: Ceiling height */
   $handler->display->display_options['fields']['field_apart_ceiling_height']['id'] = 'field_apart_ceiling_height';
   $handler->display->display_options['fields']['field_apart_ceiling_height']['table'] = 'field_data_field_apart_ceiling_height';
   $handler->display->display_options['fields']['field_apart_ceiling_height']['field'] = 'field_apart_ceiling_height';
@@ -329,7 +329,7 @@ function hk_expose_views_default_views() {
     'scale' => '2',
     'prefix_suffix' => 1,
   );
-  /* Feld: Content: excl. Commission */
+  /* Field: Content: excl. Commission */
   $handler->display->display_options['fields']['field_apart_commission']['id'] = 'field_apart_commission';
   $handler->display->display_options['fields']['field_apart_commission']['table'] = 'field_data_field_apart_commission';
   $handler->display->display_options['fields']['field_apart_commission']['field'] = 'field_apart_commission';
@@ -343,7 +343,7 @@ function hk_expose_views_default_views() {
     'scale' => '2',
     'prefix_suffix' => 1,
   );
-  /* Feld: Content: HOA fee */
+  /* Field: Content: HOA fee */
   $handler->display->display_options['fields']['field_apart_hoa_fee']['id'] = 'field_apart_hoa_fee';
   $handler->display->display_options['fields']['field_apart_hoa_fee']['table'] = 'field_data_field_apart_hoa_fee';
   $handler->display->display_options['fields']['field_apart_hoa_fee']['field'] = 'field_apart_hoa_fee';
@@ -357,14 +357,14 @@ function hk_expose_views_default_views() {
     'scale' => '0',
     'prefix_suffix' => 1,
   );
-  /* Feld: Content: Status quo */
+  /* Field: Content: Status quo */
   $handler->display->display_options['fields']['field_status_quo']['id'] = 'field_status_quo';
   $handler->display->display_options['fields']['field_status_quo']['table'] = 'field_data_field_status_quo';
   $handler->display->display_options['fields']['field_status_quo']['field'] = 'field_status_quo';
   $handler->display->display_options['fields']['field_status_quo']['label'] = 'Zustand';
   $handler->display->display_options['fields']['field_status_quo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_status_quo']['hide_empty'] = TRUE;
-  /* Feld: Content: Energieausweistyp */
+  /* Field: Content: Energieausweistyp */
   $handler->display->display_options['fields']['field_objekt_energieausweistyp']['id'] = 'field_objekt_energieausweistyp';
   $handler->display->display_options['fields']['field_objekt_energieausweistyp']['table'] = 'field_data_field_objekt_energieausweistyp';
   $handler->display->display_options['fields']['field_objekt_energieausweistyp']['field'] = 'field_objekt_energieausweistyp';
@@ -372,7 +372,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_objekt_energieausweistyp']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_objekt_energieausweistyp']['empty'] = 'wird bei Bedarf vorgelegt.';
   $handler->display->display_options['fields']['field_objekt_energieausweistyp']['hide_empty'] = TRUE;
-  /* Feld: Content: Final energy demand */
+  /* Field: Content: Final energy demand */
   $handler->display->display_options['fields']['field_objekt_endenergiebedarf']['id'] = 'field_objekt_endenergiebedarf';
   $handler->display->display_options['fields']['field_objekt_endenergiebedarf']['table'] = 'field_data_field_objekt_endenergiebedarf';
   $handler->display->display_options['fields']['field_objekt_endenergiebedarf']['field'] = 'field_objekt_endenergiebedarf';
@@ -385,21 +385,21 @@ function hk_expose_views_default_views() {
     'scale' => '2',
     'prefix_suffix' => 1,
   );
-  /* Feld: Content: Energieeffizienzklasse */
+  /* Field: Content: Energieeffizienzklasse */
   $handler->display->display_options['fields']['field_objekt_effizienzklasse']['id'] = 'field_objekt_effizienzklasse';
   $handler->display->display_options['fields']['field_objekt_effizienzklasse']['table'] = 'field_data_field_objekt_effizienzklasse';
   $handler->display->display_options['fields']['field_objekt_effizienzklasse']['field'] = 'field_objekt_effizienzklasse';
   $handler->display->display_options['fields']['field_objekt_effizienzklasse']['relationship'] = 'field_object_ref_target_id';
   $handler->display->display_options['fields']['field_objekt_effizienzklasse']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_objekt_effizienzklasse']['hide_empty'] = TRUE;
-  /* Feld: Content: Energieträger */
+  /* Field: Content: Energieträger */
   $handler->display->display_options['fields']['field_objekt_energietraeger']['id'] = 'field_objekt_energietraeger';
   $handler->display->display_options['fields']['field_objekt_energietraeger']['table'] = 'field_data_field_objekt_energietraeger';
   $handler->display->display_options['fields']['field_objekt_energietraeger']['field'] = 'field_objekt_energietraeger';
   $handler->display->display_options['fields']['field_objekt_energietraeger']['relationship'] = 'field_object_ref_target_id';
   $handler->display->display_options['fields']['field_objekt_energietraeger']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_objekt_energietraeger']['hide_empty'] = TRUE;
-  /* Feld: Content: Year built */
+  /* Field: Content: Year built */
   $handler->display->display_options['fields']['field_year_built']['id'] = 'field_year_built';
   $handler->display->display_options['fields']['field_year_built']['table'] = 'field_data_field_year_built';
   $handler->display->display_options['fields']['field_year_built']['field'] = 'field_year_built';
@@ -427,7 +427,7 @@ function hk_expose_views_default_views() {
     'thousand_separator' => '',
     'prefix_suffix' => 1,
   );
-  /* Feld: closing div class=apartmerkmale */
+  /* Field: closing div class=apartmerkmale */
   $handler->display->display_options['fields']['nothing_2']['id'] = 'nothing_2';
   $handler->display->display_options['fields']['nothing_2']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_2']['field'] = 'nothing';
@@ -438,7 +438,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['nothing_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing_2']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['nothing_2']['element_default_classes'] = FALSE;
-  /* Feld: Content: Fittings */
+  /* Field: Content: Fittings */
   $handler->display->display_options['fields']['field_ausstattung']['id'] = 'field_ausstattung';
   $handler->display->display_options['fields']['field_ausstattung']['table'] = 'field_data_field_ausstattung';
   $handler->display->display_options['fields']['field_ausstattung']['field'] = 'field_ausstattung';
@@ -453,7 +453,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_ausstattung']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_ausstattung']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_ausstattung']['multi_type'] = 'ul';
-  /* Feld: Content: Pictures */
+  /* Field: Content: Pictures */
   $handler->display->display_options['fields']['field_apart_pictures']['id'] = 'field_apart_pictures';
   $handler->display->display_options['fields']['field_apart_pictures']['table'] = 'field_data_field_apart_pictures';
   $handler->display->display_options['fields']['field_apart_pictures']['field'] = 'field_apart_pictures';
@@ -466,14 +466,14 @@ function hk_expose_views_default_views() {
   );
   $handler->display->display_options['fields']['field_apart_pictures']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_apart_pictures']['delta_offset'] = '0';
-  /* Feld: Content: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['relationship'] = 'field_object_ref_target_id';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Feld: Content: Apartment description */
+  /* Field: Content: Apartment description */
   $handler->display->display_options['fields']['field_apart_description']['id'] = 'field_apart_description';
   $handler->display->display_options['fields']['field_apart_description']['table'] = 'field_data_field_apart_description';
   $handler->display->display_options['fields']['field_apart_description']['field'] = 'field_apart_description';
@@ -481,7 +481,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_apart_description']['element_label_type'] = 'h3';
   $handler->display->display_options['fields']['field_apart_description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_description']['hide_empty'] = TRUE;
-  /* Feld: Content: Floor plan */
+  /* Field: Content: Floor plan */
   $handler->display->display_options['fields']['field_apart_floor_plan']['id'] = 'field_apart_floor_plan';
   $handler->display->display_options['fields']['field_apart_floor_plan']['table'] = 'field_data_field_apart_floor_plan';
   $handler->display->display_options['fields']['field_apart_floor_plan']['field'] = 'field_apart_floor_plan';
@@ -496,14 +496,14 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_apart_floor_plan']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_apart_floor_plan']['multi_type'] = 'ul';
   $handler->display->display_options['fields']['field_apart_floor_plan']['separator'] = '';
-  /* Feld: Content: Location */
+  /* Field: Content: Location */
   $handler->display->display_options['fields']['field_object_location']['id'] = 'field_object_location';
   $handler->display->display_options['fields']['field_object_location']['table'] = 'field_data_field_object_location';
   $handler->display->display_options['fields']['field_object_location']['field'] = 'field_object_location';
   $handler->display->display_options['fields']['field_object_location']['relationship'] = 'field_object_ref_target_id';
   $handler->display->display_options['fields']['field_object_location']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_object_location']['element_label_colon'] = FALSE;
-  /* Feld: Content: Apartment location */
+  /* Field: Content: Apartment location */
   $handler->display->display_options['fields']['field_apart_location']['id'] = 'field_apart_location';
   $handler->display->display_options['fields']['field_apart_location']['table'] = 'field_data_field_apart_location';
   $handler->display->display_options['fields']['field_apart_location']['field'] = 'field_apart_location';
@@ -511,7 +511,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_apart_location']['element_label_type'] = 'h3';
   $handler->display->display_options['fields']['field_apart_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_location']['empty'] = '[field_object_location]';
-  /* Feld: Content: Standort */
+  /* Field: Content: Standort */
   $handler->display->display_options['fields']['field_objekt_wkt']['id'] = 'field_objekt_wkt';
   $handler->display->display_options['fields']['field_objekt_wkt']['table'] = 'field_data_field_objekt_wkt';
   $handler->display->display_options['fields']['field_objekt_wkt']['field'] = 'field_objekt_wkt';
@@ -572,7 +572,7 @@ function hk_expose_views_default_views() {
       'clickable' => 0,
     ),
   );
-  /* Feld: Content: Object images */
+  /* Field: Content: Object images */
   $handler->display->display_options['fields']['field_object_images_1']['id'] = 'field_object_images_1';
   $handler->display->display_options['fields']['field_object_images_1']['table'] = 'field_data_field_object_images';
   $handler->display->display_options['fields']['field_object_images_1']['field'] = 'field_object_images';
@@ -586,7 +586,7 @@ function hk_expose_views_default_views() {
   );
   $handler->display->display_options['fields']['field_object_images_1']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_object_images_1']['delta_offset'] = '1';
-  /* Feld: Content: Object images */
+  /* Field: Content: Object images */
   $handler->display->display_options['fields']['field_object_images']['id'] = 'field_object_images';
   $handler->display->display_options['fields']['field_object_images']['table'] = 'field_data_field_object_images';
   $handler->display->display_options['fields']['field_object_images']['field'] = 'field_object_images';
@@ -602,7 +602,7 @@ function hk_expose_views_default_views() {
   $handler->display->display_options['fields']['field_object_images']['delta_offset'] = '2';
   $handler->display->display_options['fields']['field_object_images']['multi_type'] = 'ul';
   $handler->display->display_options['fields']['field_object_images']['separator'] = '';
-  /* Feld: Content: Pictures */
+  /* Field: Content: Pictures */
   $handler->display->display_options['fields']['field_apart_pictures_1']['id'] = 'field_apart_pictures_1';
   $handler->display->display_options['fields']['field_apart_pictures_1']['table'] = 'field_data_field_apart_pictures';
   $handler->display->display_options['fields']['field_apart_pictures_1']['field'] = 'field_apart_pictures';
@@ -615,7 +615,7 @@ function hk_expose_views_default_views() {
   );
   $handler->display->display_options['fields']['field_apart_pictures_1']['delta_offset'] = '1';
   $handler->display->display_options['fields']['field_apart_pictures_1']['multi_type'] = 'ul';
-  /* Feld: Content: Ansprechpartner */
+  /* Field: Content: Ansprechpartner */
   $handler->display->display_options['fields']['field_ansprechpartner']['id'] = 'field_ansprechpartner';
   $handler->display->display_options['fields']['field_ansprechpartner']['table'] = 'field_data_field_ansprechpartner';
   $handler->display->display_options['fields']['field_ansprechpartner']['field'] = 'field_ansprechpartner';
@@ -627,12 +627,12 @@ function hk_expose_views_default_views() {
     'view_mode' => 'default',
     'links' => 1,
   );
-  /* Sortierkriterien: Content: Title */
+  /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['sorts']['title']['order'] = 'DESC';
-  /* Kontextfilter: Content: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -648,7 +648,7 @@ function hk_expose_views_default_views() {
     'apartment' => 'apartment',
   );
   $handler->display->display_options['arguments']['nid']['validate_options']['access'] = TRUE;
-  /* Filterkriterium: Content: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -656,1266 +656,6 @@ function hk_expose_views_default_views() {
     'apartment' => 'apartment',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-
-  /* Display: PDF Page */
-  $handler = $view->new_display('pdf', 'PDF Page', 'pdf_1');
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'pdf_unformatted';
-  $handler->display->display_options['row_plugin'] = 'pdf_fields';
-  $handler->display->display_options['row_options']['formats'] = array(
-    'title' => array(
-      'position' => array(
-        'object' => 'page',
-        'corner' => 'top_left',
-        'x' => '200',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '16',
-        'font_family' => 'helvetica',
-        'font_style' => array(
-          'b' => 'b',
-          'i' => 0,
-          'u' => 0,
-          'd' => 0,
-          'o' => 0,
-        ),
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_address' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_bezirk' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'body' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '50',
-        'width' => '100',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_ausstattung' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_commission' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_price' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_hoa_fee' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_living_space' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_rooms' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_sleeping_rooms' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_floor' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_no_of_floors' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_status_quo' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_year_built' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_floor_plan' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_description' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_location' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_other' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_object_images' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_objekt_wkt' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'page_number' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_no' => array(
-      'position' => array(
-        'object' => 'header_footer',
-        'corner' => 'top_right',
-        'x' => '-200',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => 'R',
-        'hyphenate' => NULL,
-        'color' => '4a4a4a',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-  );
-  $handler->display->display_options['row_options']['leading_template'] = '0';
-  $handler->display->display_options['row_options']['template'] = 'expoe_template.pdf';
-  $handler->display->display_options['row_options']['succeed_template'] = '0';
-  $handler->display->display_options['path'] = 'node/%/exposes';
-  $handler->display->display_options['leading_template'] = '0';
-  $handler->display->display_options['template'] = 'hk_expose_template.pdf';
-  $handler->display->display_options['succeed_template'] = 'hk_expose_08_agb.pdf';
-  $handler->display->display_options['default_font_family'] = 'pdfahelvetica';
-  $handler->display->display_options['default_font_style'] = array(
-    'b' => 0,
-    'i' => 0,
-    'u' => 0,
-    'd' => 0,
-    'o' => 0,
-  );
-  $handler->display->display_options['default_font_size'] = '12';
-
-  /* Display: Exposé Admin Page */
-  $handler = $view->new_display('pdf', 'Exposé Admin Page', 'pdf_2');
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'pdf_unformatted';
-  $handler->display->display_options['row_plugin'] = 'pdf_fields';
-  $handler->display->display_options['row_options']['formats'] = array(
-    'title' => array(
-      'position' => array(
-        'object' => 'page',
-        'corner' => 'top_left',
-        'x' => '200',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '16',
-        'font_family' => 'helvetica',
-        'font_style' => array(
-          'b' => 'b',
-          'i' => 0,
-          'u' => 0,
-          'd' => 0,
-          'o' => 0,
-        ),
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_address' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_bezirk' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'body' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '50',
-        'width' => '100',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_ausstattung' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_commission' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_price' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_hoa_fee' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_living_space' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_rooms' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_sleeping_rooms' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_floor' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_no_of_floors' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_status_quo' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_year_built' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_floor_plan' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_description' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_location' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_other' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_object_images' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_objekt_wkt' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'page_number' => array(
-      'position' => array(
-        'object' => 'last_position',
-        'corner' => 'top_left',
-        'x' => '',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '',
-        'font_family' => 'default',
-        'font_style' => NULL,
-        'align' => NULL,
-        'hyphenate' => NULL,
-        'color' => '',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-    'field_apart_no' => array(
-      'position' => array(
-        'object' => 'header_footer',
-        'corner' => 'top_right',
-        'x' => '-200',
-        'y' => '',
-        'width' => '',
-        'height' => '',
-      ),
-      'text' => array(
-        'font_size' => '12',
-        'font_family' => 'helvetica',
-        'font_style' => NULL,
-        'align' => 'R',
-        'hyphenate' => NULL,
-        'color' => '4a4a4a',
-      ),
-      'render' => array(
-        'is_html' => 1,
-        'minimal_space' => '1',
-        'eval_before' => '',
-        'bypass_eval_before' => 0,
-        'eval_after' => '',
-        'bypass_eval_after' => 0,
-      ),
-    ),
-  );
-  $handler->display->display_options['row_options']['leading_template'] = '0';
-  $handler->display->display_options['row_options']['template'] = 'expoe_template.pdf';
-  $handler->display->display_options['row_options']['succeed_template'] = '0';
-  $handler->display->display_options['path'] = 'admin/content/exposes';
-  $handler->display->display_options['leading_template'] = '0';
-  $handler->display->display_options['template'] = 'expoe_template.pdf';
-  $handler->display->display_options['succeed_template'] = '0';
-  $handler->display->display_options['default_font_family'] = 'pdfahelvetica';
-  $handler->display->display_options['default_font_style'] = array(
-    'b' => 0,
-    'i' => 0,
-    'u' => 0,
-    'd' => 0,
-    'o' => 0,
-  );
-  $handler->display->display_options['default_font_size'] = '12';
 
   /* Display: Print */
   $handler = $view->new_display('page', 'Print', 'print');
