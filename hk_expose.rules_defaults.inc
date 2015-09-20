@@ -34,7 +34,7 @@ function hk_expose_default_rules_configuration() {
               "cookie" : "1",
               "uri_scheme" : "public",
               "file_directory" : "exposes",
-              "temporary" : "1"
+              "temporary" : "0"
             },
             "PROVIDE" : { "rules_download_file" : { "rules_downloaded_expose" : "Downloaded Expos\\u00e9" } }
           }

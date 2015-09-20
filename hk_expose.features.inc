@@ -37,24 +37,19 @@ function hk_expose_image_default_styles() {
 
   // Exported image style: expose.
   $styles['expose'] = array(
-    'label' => 'Exposé',
+    'label' => 'Exposé Landschaft',
     'effects' => array(
-      27 => array(
-        'name' => 'manualcrop_reuse',
+      38 => array(
+        'name' => 'manualcrop_crop_and_scale',
         'data' => array(
-          'reuse_crop_style' => 'colorbox_full',
-          'apply_all_effects' => 1,
+          'width' => 2480,
+          'height' => 1675,
+          'upscale' => 1,
+          'respectminimum' => 0,
+          'onlyscaleifcrop' => 1,
+          'style_name' => 'expose',
         ),
-        'weight' => 1,
-      ),
-      2 => array(
-        'name' => 'smartcrop_scale_and_crop',
-        'data' => array(
-          'width' => 2067,
-          'height' => 1163,
-          'upscale' => 0,
-        ),
-        'weight' => 2,
+        'weight' => 0,
       ),
     ),
   );
@@ -72,7 +67,7 @@ function hk_expose_node_info() {
       'base' => 'node_content',
       'description' => t('Ein Exposé verbindet einen Kontakt, ein Objekt und ein oder mehrere Wohungen zusammen mit AGB und Widerrufsbelehrung zu einem PDF.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titel'),
       'help' => '',
     ),
   );
