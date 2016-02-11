@@ -48,6 +48,7 @@ function hk_expose_image_default_styles() {
           'respectminimum' => 0,
           'onlyscaleifcrop' => 1,
           'style_name' => 'expose',
+          '#imageinfo_cache_effect_callback' => 'manualcrop_crop_and_scale_effect',
         ),
         'weight' => 0,
       ),
